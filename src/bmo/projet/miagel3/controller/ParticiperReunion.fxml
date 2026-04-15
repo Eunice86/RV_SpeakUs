@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bmo.projet.miagel3.controller.ParticiperReunionController">
+
+      <!-- Participants -->
+      <left>
+         <VBox spacing="10"
+               style="-fx-padding:10; -fx-background-color:#e3f2fd;">
+
+            <Label text="Participants"/>
+            <ListView prefWidth="150"/>
+
+         </VBox>
+      </left>
+
+      <!-- Chat -->
+      <center>
+         <VBox spacing="10" style="-fx-padding:10;">
+
+            <Label text="Réunion en cours"
+                   style="-fx-text-fill:#1e88e5; -fx-font-size:16px;"/>
+
+            <TextArea editable="false" prefHeight="300"/>
+
+            <HBox spacing="10">
+               <TextField promptText="Écrire un message..." prefWidth="300"/>
+               <Button text="Envoyer"
+                       style="-fx-background-color:#1e88e5; -fx-text-fill:white;"/>
+            </HBox>
+
+            <Button text="Demander la parole"
+                    style="-fx-background-color:#4caf50; -fx-text-fill:white;"/>
+
+         </VBox>
+      </center>
+
+      <!-- Quitter -->
+      <top>
+         <HBox alignment="CENTER_RIGHT" style="-fx-padding:10;">
+            <Button text="Quitter" fx:id="btnAnnuler" onAction="#handleAnnuler"
+                    style="-fx-background-color:red; -fx-text-fill:white;"/>
+         </HBox>
+      </top>
+
+   </BorderPane>
+

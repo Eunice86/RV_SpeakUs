@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox spacing="10"
+      style="-fx-padding:20; -fx-background-color:#f5f5f5;"
+      xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="bmo.projet.miagel3.controller.ListeReunionController">
+
+    <HBox spacing="10">
+        <TextField prefWidth="250" promptText="Rechercher une réunion..." />
+        <Button fx:id="btnPlanifier" onAction="#handlePlanifier" style="-fx-background-color:#1e88e5; -fx-text-fill:white;" text="+ Planifier" />
+        <Button fx:id="btnAnnuler" onAction="#handleAnnuler" style="-fx-background-color:#1e88e5; -fx-text-fill:white;" text="Quitter" />
+    </HBox>
+
+    <TableView>
+
+        <columns>
+            <TableColumn prefWidth="120" text="Nom" />
+            <TableColumn prefWidth="120" text="Sujet" />
+            <TableColumn prefWidth="100" text="Date" />
+            <TableColumn prefWidth="80" text="Etat" />
+            <TableColumn prefWidth="100" text="Action" />
+        </columns>
+
+    </TableView>
+
+</VBox>

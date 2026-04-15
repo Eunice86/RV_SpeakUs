@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane style="-fx-background-color:#f5f7fa;"
+            xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bmo.projet.miagel3.controller.AcceuilController">
+
+   <!-- HEADER -->
+   <top>
+      <HBox alignment="CENTER_LEFT"
+            spacing="10"
+            style="-fx-padding:15;-fx-background-color:white; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.1),5,0,0,2);">
+
+         <ImageView fitHeight="50" preserveRatio="true">
+            <image>
+               <Image url="@images/logo.png" />
+            </image>
+         </ImageView>
+
+         <Label style="-fx-text-fill:#1e88e5;                           -fx-font-size:22px;                           -fx-font-weight:bold;" text="SpeakUS" />
+      </HBox>
+   </top>
+
+   <!-- CONTENU -->
+   <center>
+      <VBox alignment="CENTER" prefHeight="300.0" prefWidth="550.0" spacing="30">
+
+         <Label style="-fx-text-fill:#1e88e5;" text="Menu Principal">
+            <font>
+               <Font size="22" />
+            </font>
+         </Label>
+
+         <GridPane alignment="CENTER" hgap="20" vgap="20">
+
+            <!-- PLANIFIER -->
+            <Button fx:id="btnPlanifier"
+                    onAction="#handlePlanifier"
+                    prefHeight="70" prefWidth="240"
+                    style="-fx-background-color:white; -fx-background-radius:15; -fx-font-size:14; -fx-text-fill:black; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.1),5,0,0,2);"
+                    GridPane.columnIndex="0" GridPane.rowIndex="0">
+               <text> Planifier une réunion</text>
+            </Button>
+
+            <!-- CONSULTER -->
+            <Button onAction="#handleConsulter"
+                    prefHeight="70" prefWidth="240"
+                    style="-fx-background-color:white;-fx-background-radius:15;-fx-font-size:14;-fx-text-fill:black;-fx-effect:dropshadow(gaussian, rgba(0,0,0,0.1),5,0,0,2);"
+                    GridPane.columnIndex="1" GridPane.rowIndex="0">
+               <text>Consulter les réunions</text>
+            </Button>
+
+            <!-- ENTRER -->
+            <Button onAction="#handleEntrer"
+                    prefHeight="70" prefWidth="240"
+                    style="-fx-background-color:white; -fx-background-radius:15; -fx-font-size:14; -fx-text-fill:black; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.1),5,0,0,2);"
+                    GridPane.columnIndex="0" GridPane.rowIndex="1">
+               <text>Entrer dans une réunion</text>
+            </Button>
+
+            <!-- DECONNEXION -->
+            <Button onAction="#handleDeconnexion"
+                    prefHeight="70" prefWidth="240"
+                    style="-fx-background-color:#e53935;-fx-text-fill:white; -fx-background-radius:15; -fx-font-size:14;"
+                    GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <text>Se déconnecter</text>
+            </Button>
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+
+         </GridPane>
+
+      </VBox>
+   </center>
+
+</BorderPane>

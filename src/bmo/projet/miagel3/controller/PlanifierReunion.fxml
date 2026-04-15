@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<BorderPane style="-fx-background-color:#e3f2fd;"
+            xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bmo.projet.miagel3.controller.PlanifierReunionController">
+
+    <!-- HEADER -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding:15; -fx-background-color:white;                      -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.1),5,0,0,2);">
+
+            <ImageView fitHeight="50" preserveRatio="true">
+                <image>
+                    <Image url="@images/logo.png" />
+                </image>
+            </ImageView>
+
+            <Label style="-fx-text-fill:#1e88e5;                           -fx-font-size:22px;                           -fx-font-weight:bold;" text="SpeakUS" />
+        </HBox>
+    </top>
+
+    <!-- CONTENU -->
+    <center>
+        <VBox alignment="CENTER" prefWidth="350" spacing="15" style="-fx-background-color:white; -fx-padding:20; -fx-background-radius:15;">
+
+            <Label style="-fx-text-fill:#1e88e5; -fx-font-size:18px;" text="Planifier une Réunion" />
+
+            <TextField promptText="Nom de la réunion" />
+            <TextField promptText="Sujet" />
+            <DatePicker />
+            <TextField promptText="Durée" />
+            <TextArea promptText="Ordre du jour" />
+
+            <HBox spacing="10">
+                <RadioButton text="Standard" />
+                <RadioButton text="Privée" />
+                <RadioButton text="Démocratique" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Button style="-fx-background-color:#1e88e5; -fx-text-fill:white;" text="Créer" />
+                <Button fx:id="btnAnnuler" onAction="#handleAnnuler" text="Annuler" />
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>
